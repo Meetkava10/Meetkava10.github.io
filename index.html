@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AtelierNull</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="flashlight-mask">
+    <div class="underscore">_</div>
+    <div class="container">
+      <h1>null_00</h1>
+      <p class="reveal">access requires intent</p>
+      <a class="reveal secret-link" href="form.html">submit: access form</a>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      document.body.style.setProperty('--x', `${e.clientX}px`);
+      document.body.style.setProperty('--y', `${e.clientY}px`);
+    });
+  </script>
+</body>
+</html>
