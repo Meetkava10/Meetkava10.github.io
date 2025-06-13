@@ -1,1 +1,72 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive Fullscreen Layout */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  font-family: monospace;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+  position: relative;
+  gap: 1.2rem;
+}
+
+/* Title stays static */
+.title {
+  font-size: 2.8rem;
+  color: white;
+}
+
+/* Fade animation for two lines */
+@keyframes fadeCycle {
+  0%, 100% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+}
+
+.fade {
+  animation: fadeCycle 4s infinite ease-in-out;
+  font-size: 1.2rem;
+}
+
+/* Green Access Link */
+.link {
+  color: #00ff00;
+  text-decoration: none;
+  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
+}
+
+/* White intent line */
+.white {
+  color: white;
+}
+
+/* Underscore at bottom left */
+.underscore {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-size: 5.5rem;
+  color: white;
+  opacity: 0.6;
+  line-height: 1;
+}
 
