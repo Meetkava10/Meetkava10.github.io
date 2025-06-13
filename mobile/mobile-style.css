@@ -1,72 +1,79 @@
-/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Responsive Fullscreen Layout */
 html, body {
   width: 100%;
   height: 100%;
-  background: #000;
+  background: black;
   font-family: monospace;
-  overflow: hidden;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.mobile-wrapper {
+.container {
   width: 100%;
   height: 100%;
+  aspect-ratio: 9 / 16;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 2rem;
+  padding-left: 6vw;
   position: relative;
-  gap: 1.2rem;
 }
 
-/* Title stays static */
 .title {
-  font-size: 2.8rem;
-  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Fade animation for two lines */
-@keyframes fadeCycle {
-  0%, 100% { opacity: 0; }
-  10%, 90% { opacity: 1; }
-}
-
-.fade {
-  animation: fadeCycle 4s infinite ease-in-out;
-  font-size: 1.2rem;
-}
-
-/* Green Access Link */
-.link {
-  color: #00ff00;
+.fade-text {
+  opacity: 0;
+  animation: fadeCycle 8s infinite;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   text-decoration: none;
-  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
 }
 
-/* White intent line */
+.fade-text:nth-child(2) {
+  animation-delay: 0s;
+}
+
+.fade-text:nth-child(3) {
+  animation-delay: 4s;
+}
+
 .white {
   color: white;
 }
 
-/* Underscore at bottom left */
-.underscore {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  font-size: 5.5rem;
-  color: white;
-  opacity: 0.6;
-  line-height: 1;
+.green {
+  color: #00ff00;
+  text-shadow: 0 0 4px #00ff00, 0 0 8px #00ff00;
 }
 
+.underscore {
+  position: absolute;
+  bottom: 16px;
+  left: 20px;
+  font-size: 5rem;
+  opacity: 0.6;
+  color: white;
+}
+
+@keyframes fadeCycle {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 40% {
+    opacity: 1;
+  }
+  50%, 90% {
+    opacity: 0;
+  }
+}
