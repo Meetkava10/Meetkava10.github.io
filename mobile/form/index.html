@@ -6,36 +6,18 @@
   <title>ateliernull | Form</title>
   <link rel="stylesheet" href="mobile-style.css" />
   <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 </head>
 <body>
-  <div class="flashlight-mask">
+  <div class="container">
     <div class="underscore">_</div>
-    <div class="container">
-      <h1>null_00</h1>
-      <p class="reveal">Why are you here?</p>
-      <p class="reveal">What is your intention?</p>
-      <p class="reveal">Complete this: Perfection is when[ ________ ]</p>
-      <p class="reveal message">
-        transmit responses to: <span class="email">transmit@ateliernull.art</span>
-      </p>
-      <a class="reveal back-link" href="/mobile/">[return]</a>
-    </div>
+    <h1>null_00</h1>
+    <p class="reveal">Why are you here?</p>
+    <p class="reveal">What is your intention?</p>
+    <p class="reveal">Complete this: Perfection is when[ ________ ]</p>
+    <p class="reveal message">
+      transmit responses to: <span class="email">transmit@ateliernull.art</span>
+    </p>
+    <a class="reveal back-link" href="/mobile/">[return]</a>
   </div>
-
-  <script>
-    document.addEventListener("mousemove", (e) => {
-      document.body.style.setProperty('--x', ${e.clientX}px);
-      document.body.style.setProperty('--y', ${e.clientY}px);
-    });
-
-    document.addEventListener("touchmove", (e) => {
-      if (e.touches.length > 0) {
-        const touch = e.touches[0];
-        document.body.style.setProperty('--x', ${touch.clientX}px);
-        document.body.style.setProperty('--y', ${touch.clientY}px);
-      }
-    }, { passive: true });
-  </script>
 </body>
 </html>
