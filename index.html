@@ -13,7 +13,7 @@
   <!-- Mobile Detection & Redirect -->
   <script>
     const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
-    if (isMobile && !window.location.pathname.includes('/')) {
+    if (isMobile && !window.location.pathname.includes('/mobile')) {
       window.location.href = '/mobile/';
     }
   </script>
