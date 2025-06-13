@@ -6,10 +6,17 @@
   <title>ateliernull</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Favicon links -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
-  <!-- Optional: for better browser compatibility -->
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+  <!-- Mobile Detection & Redirect -->
+  <script>
+    const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+    if (isMobile && !window.location.pathname.includes('/mobile')) {
+      window.location.href = '/mobile/';
+    }
+  </script>
 </head>
 <body>
   <div class="flashlight-mask">
